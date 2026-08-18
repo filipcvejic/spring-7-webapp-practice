@@ -13,6 +13,13 @@ public class Author {
     private String firstName;
     private String lastName;
 
+    @ManyToMany(mappedBy = "authors")
+    private Set<Book> books;
+
+    public Set<Book> getBooks() {
+        return books;
+    }
+
     public Long getId() {
         return id;
     }
